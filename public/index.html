@@ -25,63 +25,63 @@
     </style> -->
     <script>        
     // Load navbar
-    fetch('/public/assets/components/navbar.html')
+    fetch('/assets/components/navbar.html')
         .then(res => res.text())
         .then(html => {
             document.getElementById('navbar').innerHTML = html;
 
-        // Navbar is loaded and rendered:
-        const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
-        const mobileMenu = document.getElementById('mobile-menu');
+            // Navbar is loaded and rendered:
+            const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', function () {
-                const expanded = this.getAttribute('aria-expanded') === 'true';
-                this.setAttribute('aria-expanded', !expanded);
-                mobileMenu.classList.toggle('hidden');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !expanded);
+                    mobileMenu.classList.toggle('hidden');
+                });
+            } else {
+                console.warn('Mobile menu elements not found');
+            }
             });
-        } else {
-            console.warn('Mobile menu elements not found');
-        }
+
+            // Put your toggle logic here so it waits until nav is actually in the DOM
+            //     const toggle = document.querySelector('[aria-controls="mobile-menu"]');
+            //     const menu = document.getElementById('mobile-menu');
+
+            //     toggle?.addEventListener('click', () => {
+            //     menu?.classList.toggle('hidden');
+            //     });
+            // });
+            // fetch('/public/components/navbar.html')
+            //     .then(res => res.text())
+            //     .then(html => document.getElementById('navbar').innerHTML = html);
+            // Load footer
+    fetch('./assets/components/footer.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('footer').innerHTML = html);
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const productContainer = document.getElementById('productContainer');
+        const moveLeft = document.getElementById('moveLeft');
+        const moveRight = document.getElementById('moveRight');
+
+        const scrollAmount = 300;
+
+        moveLeft?.addEventListener('click', function () {
+            productContainer.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
         });
 
-        // Put your toggle logic here so it waits until nav is actually in the DOM
-        //     const toggle = document.querySelector('[aria-controls="mobile-menu"]');
-        //     const menu = document.getElementById('mobile-menu');
-
-        //     toggle?.addEventListener('click', () => {
-        //     menu?.classList.toggle('hidden');
-        //     });
-        // });
-        // fetch('/public/components/navbar.html')
-        //     .then(res => res.text())
-        //     .then(html => document.getElementById('navbar').innerHTML = html);
-        // Load footer
-        fetch('/public/assets/components/footer.html')
-            .then(res => res.text())
-            .then(html => document.getElementById('footer').innerHTML = html);
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const productContainer = document.getElementById('productContainer');
-            const moveLeft = document.getElementById('moveLeft');
-            const moveRight = document.getElementById('moveRight');
-
-            const scrollAmount = 300;
-
-            moveLeft?.addEventListener('click', function () {
-                productContainer.scrollBy({
-                    left: -scrollAmount,
-                    behavior: 'smooth'
-                });
-            });
-
-            moveRight?.addEventListener('click', function () {
-                productContainer.scrollBy({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                });
+        moveRight?.addEventListener('click', function () {
+            productContainer.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
             });
         });
+    });
     </script>
 </head>
 <body>
