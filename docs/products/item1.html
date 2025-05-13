@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/docs/output.css">
+    <title>Prosthetic Limb</title>
+    <script>
+    // Load navbar
+    fetch('/docs/components/navbar.html')
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('navbar').innerHTML = html;
+
+        // Navbar is loaded and rendered:
+        const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function () {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !expanded);
+                mobileMenu.classList.toggle('hidden');
+            });
+        } else {
+            console.warn('Mobile menu elements not found');
+        }
+        });
+
+        // Put your toggle logic here so it waits until nav is actually in the DOM
+        //     const toggle = document.querySelector('[aria-controls="mobile-menu"]');
+        //     const menu = document.getElementById('mobile-menu');
+
+        //     toggle?.addEventListener('click', () => {
+        //     menu?.classList.toggle('hidden');
+        //     });
+        // });
+        // fetch('/docs/components/navbar.html')
+        //     .then(res => res.text())
+        //     .then(html => document.getElementById('navbar').innerHTML = html);
+
+        // Load footer
+        fetch('/docs/components/footer.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('footer').innerHTML = html);
+
+    </script>
+</head>
+<body class="bg-gray-50">
+<nav id="navbar"></nav>
+<!-- Prosthetic Limb Main Product Section -->
+        <!-- Hero Section -->
+<section class="relative h-screen w-full overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+        <img src="/docs/assets/img/item1/ProstheticLimbHero.png" alt="Prosthetic limb with white sneaker" class="w-full h-full object-cover">
+    </div>
+    
+    <!-- Content Container -->
+    <div class="relative h-full w-full flex items-center justify-end">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="md:max-w-lg lg:max-w-xl ml-auto">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Advanced Prosthetic Solutions</h1>
+                <p class="text-lg md:text-xl text-white mb-8">Innovative prosthetic limbs and specialized footwear designed for comfort, functionality, and a natural experience.</p>
+                <!-- You can add a CTA button here if needed -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Limb Gallery Section - Mismatched Grid -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Prosthetic Solutions</h2>
+            <p class="text-gray-600 mb-12 max-w-3xl">Discover our range of high-quality prosthetic limbs designed to provide comfort, functionality, and natural movement for various lifestyles and activities.</p>
+            
+            <!-- Mismatched Grid Gallery -->
+            <div class="grid grid-cols-12 gap-4">
+                <!-- Large image 1 -->
+                <div class="col-span-12 md:col-span-6 lg:col-span-8 row-span-2">
+                    <div class="h-full rounded-lg overflow-hidden shadow-lg">
+                        <img src="/api/placeholder/800/600" alt="Advanced Prosthetic Leg" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- Smaller image 1 -->
+                <div class="col-span-12 md:col-span-6 lg:col-span-4">
+                    <div class="h-full rounded-lg overflow-hidden shadow-lg">
+                        <img src="/api/placeholder/400/300" alt="Prosthetic Leg Detail" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- Smaller image 2 -->
+                <div class="col-span-12 md:col-span-6 lg:col-span-4">
+                    <div class="h-full rounded-lg overflow-hidden shadow-lg">
+                        <img src="/api/placeholder/400/300" alt="Prosthetic Limb Walking" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- Medium image 1 -->
+                <div class="col-span-12 md:col-span-6 lg:col-span-8 row-span-1">
+                    <div class="h-full rounded-lg overflow-hidden shadow-lg">
+                        <img src="/api/placeholder/800/300" alt="Prosthetic Components" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- Large image 2 -->
+                <div class="col-span-12 lg:col-span-5 row-span-2 mt-4">
+                    <div class="h-full rounded-lg overflow-hidden shadow-lg">
+                        <img src="/api/placeholder/500/600" alt="Active Lifestyle Prosthetic" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- Medium image 2 -->
+                <div class="col-span-12 md:col-span-6 lg:col-span-7 mt-4">
+                    <div class="h-full rounded-lg overflow-hidden shadow-lg">
+                        <img src="/api/placeholder/700/300" alt="Prosthetic Fitting" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- Small image 3 -->
+                <div class="col-span-12 md:col-span-6 lg:col-span-7 mt-4">
+                    <div class="h-full rounded-lg overflow-hidden shadow-lg">
+                        <img src="/api/placeholder/700/250" alt="Prosthetic Design" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prosthetic Specifications Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Prosthetic Technology Specifications</h2>
+                    <p class="text-gray-600 mb-6">Our prosthetic limbs are engineered with precision using the latest technology and materials to ensure optimal performance and comfort.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-600 flex items-center justify-center mt-1">
+                                <span class="text-white text-xs font-bold">1</span>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold text-gray-800">Residual Limb Socket</h3>
+                                <p class="text-gray-600">Custom-fitted socket with gel liner for maximum comfort and reduced friction</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-600 flex items-center justify-center mt-1">
+                                <span class="text-white text-xs font-bold">2</span>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold text-gray-800">Knee Joint System</h3>
+                                <p class="text-gray-600">Microprocessor-controlled knee joint for adaptive movement across different terrains</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-600 flex items-center justify-center mt-1">
+                                <span class="text-white text-xs font-bold">3</span>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold text-gray-800">Pylon Structure</h3>
+                                <p class="text-gray-600">Lightweight carbon fiber construction with shock absorption capabilities</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-600 flex items-center justify-center mt-1">
+                                <span class="text-white text-xs font-bold">4</span>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold text-gray-800">Foot Shell System</h3>
+                                <p class="text-gray-600">Energy-return foot design with specialized connection for our footwear solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="rounded-lg overflow-hidden shadow-xl">
+                        <img src="/api/placeholder/600/500" alt="Prosthetic Limb Specifications" class="w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialized Footwear Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Specialized Footwear Solutions</h2>
+            <p class="text-gray-600 mb-12 max-w-3xl">Our specially designed footwear provides the perfect complement to our prosthetic limbs, offering comfort, stability, and style for every occasion.</p>
+            
+            <div class="flex flex-col lg:flex-row mb-16">
+                <div class="lg:w-1/2 lg:pr-10 mb-10 lg:mb-0">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">How Our Specialized Footwear Works</h3>
+                    <p class="text-gray-600 mb-6">Our footwear is specifically designed to work seamlessly with prosthetic limbs, providing enhanced functionality and comfort through these key features:</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-blue-600">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-gray-800">Anatomic Insoles</h4>
+                                <p class="text-gray-600">Removable anatomic insoles that conform to provide ideal support</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-blue-600">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-gray-800">Anti-slip Materials</h4>
+                                <p class="text-gray-600">Enhanced traction for stability and confidence during movement</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-blue-600">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-gray-800">Flexible Adjustment</h4>
+                                <p class="text-gray-600">Velcro straps and flexible materials adapt to prosthetic foot shells</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-blue-600">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-gray-800">Stylish Design</h4>
+                                <p class="text-gray-600">Contemporary aesthetics that don't compromise on functionality</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="rounded-lg overflow-hidden shadow-xl">
+                        <img src="/api/placeholder/600/400" alt="Specialized Footwear Technology" class="w-full">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footwear Models Grid -->
+            <h3 class="text-2xl font-bold text-gray-800 mb-8">DX Series Footwear Models</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Model 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-64 overflow-hidden">
+                        <img src="/api/placeholder/400/300" alt="DX01 Sandal" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-semibold text-gray-800">DX01</h4>
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Casual Ladies</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Casual ladies sandal with microfiber insole and adjustable straps</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Sizes: W5-11</span>
+                            <a href="#contact" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Details →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-64 overflow-hidden">
+                        <img src="/api/placeholder/400/300" alt="DX02 Sandal" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-semibold text-gray-800">DX02</h4>
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Casual Ladies</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Casual ladies sandal with orthopedic design and velcro closure</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Sizes: W5-11</span>
+                            <a href="#contact" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Details →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-64 overflow-hidden">
+                        <img src="/api/placeholder/400/300" alt="DX03 Sandal" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-semibold text-gray-800">DX03</h4>
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Casual Ladies</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Casual ladies sandal with soft cushioning and multi-strap design</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Sizes: W5-11</span>
+                            <a href="#contact" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Details →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-64 overflow-hidden">
+                        <img src="/api/placeholder/400/300" alt="DX04 Sandal" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-semibold text-gray-800">DX04</h4>
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Casual Ladies</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Casual ladies sandal with soft materials and anatomic footbed</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Sizes: W5-11</span>
+                            <a href="#contact" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Details →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Contact Section -->
+    <!-- <section id="contact" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Us Today</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Have questions about our prosthetic limbs or specialized footwear? Reach out to our team via WhatsApp for quick responses and personalized assistance.</p>
+            
+            <a href="https://wa.me/1234567890" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center transition">
+                <i class="fab fa-whatsapp mr-3 text-2xl"></i>
+                Chat with Us on WhatsApp
+            </a>
+            
+            <p class="text-gray-500 mt-6">Our team is available Monday-Friday, 9AM-6PM</p>
+        </div>
+    </section> -->
+
+<footer id="footer"><!-- Footer will be loaded here --></footer>
+</body>
+</html>
