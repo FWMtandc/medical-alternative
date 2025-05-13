@@ -31,3 +31,7 @@ Instead of typing the long command every time, update your package.json:
 }
 
 Now you can just run: "npm run dev"
+
+
+This project using Component to save some time, Github Pages doesnt support so instead we using Vercel
+turo: https://www.youtube.com/watch?v=E8xaV6fiTaA
