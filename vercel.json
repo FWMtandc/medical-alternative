@@ -1,5 +1,6 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "buildCommand": "npx tailwindcss -i ./assets/input.css -o ./assets/output.css",
+  "outputDirectory": ".",
+  "installCommand": "npm install -D tailwindcss",
+  "routes": [{ "handle": "filesystem" }, { "src": "/(.*)", "dest": "/index.html" }]
 }

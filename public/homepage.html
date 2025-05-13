@@ -25,7 +25,7 @@
     </style> -->
     <script>        
     // Load navbar
-    fetch('/docs/components/navbar.html')
+    fetch('/public/assets/components/navbar.html')
         .then(res => res.text())
         .then(html => {
             document.getElementById('navbar').innerHTML = html;
@@ -57,7 +57,7 @@
         //     .then(res => res.text())
         //     .then(html => document.getElementById('navbar').innerHTML = html);
         // Load footer
-        fetch('/docs/components/footer.html')
+        fetch('/public/assets/components/footer.html')
             .then(res => res.text())
             .then(html => document.getElementById('footer').innerHTML = html);
 
