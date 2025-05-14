@@ -2,7 +2,16 @@
   publish = "public"
   command = "npx tailwindcss -i ./public/input.css -o ./public/output.css --minify"
 
+# Use rewrites (not redirects) to handle HTML pages
+[[redirects]]
+  from = "/products/*"
+  to = "/item:splat.html"
+  status = 200
+  force = false
+
+# SPA fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false

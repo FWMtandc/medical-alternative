@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/docs/output.css">
+    <link rel="stylesheet" href="/output.css">
     <title>Prosthetic Limb</title>
     <script>
     // Load navbar
-    fetch('/docs/components/navbar.html')
+    fetch('../assets/components/navbar.html')
         .then(res => res.text())
         .then(html => {
             document.getElementById('navbar').innerHTML = html;
@@ -35,12 +35,12 @@
         //     menu?.classList.toggle('hidden');
         //     });
         // });
-        // fetch('/docs/components/navbar.html')
+        // fetch('/components/navbar.html')
         //     .then(res => res.text())
         //     .then(html => document.getElementById('navbar').innerHTML = html);
 
         // Load footer
-        fetch('/docs/components/footer.html')
+        fetch('../assets/components/footer.html')
             .then(res => res.text())
             .then(html => document.getElementById('footer').innerHTML = html);
 
@@ -53,7 +53,7 @@
 <section class="relative h-screen w-full overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0">
-        <img src="/docs/assets/img/item1/ProstheticLimbHero.png" alt="Prosthetic limb with white sneaker" class="w-full h-full object-cover">
+        <img src="/assets/img/item1/ProstheticLimbHero.png" alt="Prosthetic limb with white sneaker" class="w-full h-full object-cover">
     </div>
     
     <!-- Content Container -->

@@ -3,7 +3,9 @@
     "@tailwindcss/cli": "^4.1.6"
   },
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./public/input.css -o ./public/output.css --watch"
+    "css": "npx @tailwindcss/cli -i ./public/input.css -o ./public/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./public/input.css -o ./public/output.css --minify",
+    "netflix": "netlify dev"
   },
   "devDependencies": {
     "tailwindcss": "^4.1.6"

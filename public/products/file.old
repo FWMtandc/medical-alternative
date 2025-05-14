@@ -73,3 +73,60 @@
     </div>
 </body>
 </html>
+
+
+      <div class="relative">
+            <!-- Background with 2/3 light gray on top and 1/3 dark blue at bottom -->
+            <div class="absolute inset-0 bg-[#E3FCFD]">
+                <div class="absolute bottom-0 w-full h-1/3 bg-gray-100">
+                </div>
+            </div>
+            
+            <div class="relative max-w-7xl mx-auto pt-16">
+                <div class=" px-4">
+                    <div class="text-center mb-4">
+                        <h1 class="text-3xl font-bold text-gray-800">nexoLink</h1>
+                    </div>
+                    <!-- Banner with purple background and rounded corners -->
+                    <div class="bg-red-800 rounded-3xl overflow-hidden flex flex-col md:flex-row items-center py-32">
+                        <!-- Left side content -->
+                        <div class="p-8 md:p-12 md:w-1/2 text-white">
+                            <!-- Subtle circular graphic in background -->
+                            <div class="relative">
+                                <div class="absolute -top-24 -left-24 w-96 h-96 border-2 border-red-300 rounded-full opacity-70"></div>
+                                
+                                <!-- Text content -->
+                                <div class="relative z-10 ml-32">
+                                    <h2 class="text-3xl md:text-4xl font-bold mb-6">IoT Integration Device</h2>
+                                    <p class="text-lg mb-8">
+                                        Integration devices that connect over serial to medical devices for data capture, enabling efficient and accurate data transfer across different systems.
+                                    </p>
+                                    <button class="border-2 border-white text-white font-medium py-2 px-8 rounded-full hover:bg-white hover:text-red-500 transition duration-300">
+                                        Contact Us
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right side image -->
+                        <div class="lg:hidden md:w-1/2 flex justify-end items-center">
+                            <img src="/assets/img/item2/iot.webp" alt="Gambar" class="w-full max-w-[360px] object-cover absolute  right-32 top-32 mt-16 mr-10" />
+                        </div>
+                        <div class=" md:w-1/2 flex justify-end items-center">
+                            <img src="/assets/img/item2/iot.webp" alt="Gambar" class="w-full min-w-[250px] max-w-[450px] object-cover absolute  right-32 top-50 mt-12 mr-10" />
+                        </div>
+                        <div>
+                            <img src="/assets/img/item2/iot-2.webp" alt="">
+                        </div>
+                    </div>
+                    <!-- <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Seamless Device Integration</h2>
+                        <p class="text-lg mb-8">
+                            By automating the data capture process and ensuring interoperability among various medical devices and healthcare information systems.
+
+                            NexoLink is a custom IoT device, by NexoPrima. It have 3 x RS232 interface over RJ45 and 2 x USB 2.0. It can connect up-to 5 medical devices simultaneously, such as CTG, patient monitor, ventilator and Infusion pump.
+                        </p>
+                    </div> -->
+                </div>
+            </div>
+        </div>

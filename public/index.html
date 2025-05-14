@@ -25,7 +25,7 @@
     </style> -->
     <script>        
     // Load navbar
-    fetch('/assets/components/navbar.html')
+    fetch('../assets/components/navbar.html')
         .then(res => res.text())
         .then(html => {
             document.getElementById('navbar').innerHTML = html;
@@ -53,35 +53,35 @@
             //     menu?.classList.toggle('hidden');
             //     });
             // });
-            // fetch('/public/components/navbar.html')
+            // fetch('/components/navbar.html')
             //     .then(res => res.text())
             //     .then(html => document.getElementById('navbar').innerHTML = html);
             // Load footer
-    fetch('./assets/components/footer.html')
-        .then(res => res.text())
-        .then(html => document.getElementById('footer').innerHTML = html);
+        fetch('../assets/components/footer.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('footer').innerHTML = html);
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const productContainer = document.getElementById('productContainer');
-        const moveLeft = document.getElementById('moveLeft');
-        const moveRight = document.getElementById('moveRight');
+        document.addEventListener('DOMContentLoaded', function () {
+            const productContainer = document.getElementById('productContainer');
+            const moveLeft = document.getElementById('moveLeft');
+            const moveRight = document.getElementById('moveRight');
 
-        const scrollAmount = 300;
+            const scrollAmount = 300;
 
-        moveLeft?.addEventListener('click', function () {
-            productContainer.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
+            moveLeft?.addEventListener('click', function () {
+                productContainer.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+
+            moveRight?.addEventListener('click', function () {
+                productContainer.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
             });
         });
-
-        moveRight?.addEventListener('click', function () {
-            productContainer.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-    });
     </script>
 </head>
 <body>
@@ -113,8 +113,8 @@
                 <!-- <span class="text-6xl md:text-8xl text-gray-200 font-light absolute tracking-wide mb-2">PRODUCTS</span>
                     <span class="text-3xl md:text-4xl font-bold text-black relative">PRODUCTS</span> -->
                 </h2>
-                <h3 class="text-center mb-6">
-                    <div class="font-bold mb-12">
+                <h3 class="text-center mb-12">
+                    <div class="font-bold mb-6">
                         EVERYTHING YOU NEED TO PREPARE YOURSELF FOR MOST EMERGENCIES.
                     </div>
                     <div class="mx-8">
@@ -123,10 +123,10 @@
                 </h3>
             </div>
             <!-- box container layout -->
-            <div id="productContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto justify-items-center">
+            <div id="productContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto justify-items-center mt-4">
                 <div class="max-w-[400px] max-h-[390px] bg-white rounded-4xl shadow-md transition-transform hover:-translate-y-2"> <!-- NEGATIVE to move UP -->
                     <div>
-                        <img src="/public/assets/img/products/item1.png" alt="Prosthetic Leg" class="rounded-4xl w-full">
+                        <img src="/assets/img/products/item1.png" alt="Prosthetic Leg" class="rounded-4xl w-full">
                     </div>
                     <div class="p-6 flex justify-between items-center">
                         <div>
@@ -137,12 +137,12 @@
                                 Discription for prosthetic leg
                             </p>
                         </div>
-                        <a href="/public/products/item1.html" class="bg-black rounded-full min-w-12 min-h-12 flex justify-center items-center ml-4">
+                        <a href="/products/item1rev2.html" class="bg-black rounded-full min-w-12 min-h-12 flex justify-center items-center ml-4">
                             <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 18l6-6-6-6"></path>
                             </svg>
                         </a>
-                        <!-- <a href="/public/products/item1.html" class="text-center block w-full items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg hover:bg-red-600 shadow-sm text-white bg-black cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                        <!-- <a href="/products/item1.html" class="text-center block w-full items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg hover:bg-red-600 shadow-sm text-white bg-black cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
                             Show More
                         </a> -->
                         <!-- <button type="button" class=" text-center w-full items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg hover:bg-red-600 shadow-sm text-white bg-black cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
@@ -163,7 +163,7 @@
                                 small text
                             </p>
                         </div>
-                        <a href="/public/products/item2.html" class="bg-black rounded-full min-w-12 min-h-12 flex justify-center items-center ml-4">
+                        <a href="/products/item2.html" class="bg-black rounded-full min-w-12 min-h-12 flex justify-center items-center ml-4">
                             <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 18l6-6-6-6"></path>
                             </svg>
@@ -172,7 +172,7 @@
                 </div>
                 <div class=" max-w-[400px] max-h-[390px] bg-white rounded-4xl shadow-md transition-transform hover:-translate-y-2"> <!-- NEGATIVE to move UP -->
                     <div>
-                        <img src="/public/assets/img/products/item3.png" alt="Prosthetic Leg" class="rounded-4xl w-full">
+                        <img src="/assets/img/products/item3.png" alt="Prosthetic Leg" class="rounded-4xl w-full">
                     </div>
                     <div class="p-6 flex justify-between items-center">
                         <div>
@@ -183,7 +183,7 @@
                                 small text
                             </p>
                         </div>
-                        <a href="/public/products/item1.html" class="bg-black rounded-full min-w-12 min-h-12 flex justify-center items-center">
+                        <a href="./error404.html" class="bg-black rounded-full min-w-12 min-h-12 flex justify-center items-center">
                             <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 18l6-6-6-6"></path>
                             </svg>
@@ -192,7 +192,7 @@
                 </div>
                 <div class=" max-w-[400px] max-h-[390px] bg-white rounded-4xl shadow-md transition-transform hover:-translate-y-2"> <!-- NEGATIVE to move UP -->
                     <div>
-                        <img src="/public/assets/img/products/item4.png" alt="Prosthetic Leg" class="rounded-4xl w-full">
+                        <img src="/assets/img/products/item4.png" alt="Prosthetic Leg" class="rounded-4xl w-full">
                     </div>
                     <div class="p-6 flex justify-between items-center">
                         <div>
@@ -203,7 +203,7 @@
                                 small text
                             </p>
                         </div>
-                        <a href="/public/products/item1.html" class="bg-black rounded-full min-w-12 min-h-12 flex justify-center items-center">
+                        <a href="/products/item4.html" class="bg-black rounded-full min-w-12 min-h-12 flex justify-center items-center">
                             <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 18l6-6-6-6"></path>
                             </svg>
@@ -212,7 +212,7 @@
                 </div>
                 <div class="max-w-[400px] max-h-[390px] bg-white rounded-4xl shadow-md transition-transform hover:-translate-y-2"> <!-- NEGATIVE to move UP -->
                     <div>
-                        <img src="/public/assets/img/products/item5.png" alt="Prosthetic Leg" class="rounded-4xl w-full">
+                        <img src="/assets/img/products/item5.png" alt="Prosthetic Leg" class="rounded-4xl w-full">
                     </div>
                     <div class="p-6 flex justify-between items-center">
                         <div>
@@ -223,7 +223,7 @@
                                 small text
                             </p>
                         </div>
-                        <a href="/public/products/item5.html" class="bg-black rounded-full min-w-12 min-h-12 flex justify-center items-center">
+                        <a href="/products/item5.html" class="bg-black rounded-full min-w-12 min-h-12 flex justify-center items-center">
                             <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 18l6-6-6-6"></path>
                             </svg>
@@ -433,13 +433,13 @@
 </div>
 <!-- Contact Us Section with Supplier Details -->
 <div class="bg-red-800 ">
-    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16">
+    <div class="max-w-3xl mx-auto py-12 px-4 sm:px-6 lg:py-16">
         <div class="text-center mb-8">
             <h2 class="text-3xl font-bold text-gray-100">Contact Us</h2>
             <div class="w-24 h-1 bg-black mx-auto mt-4 mb-6"></div>
             <p class="text-gray-100 max-w-xl mx-auto">Have questions or need assistance? Fill out the form below and we'll get back to you as soon as possible.</p>
         </div>
-        <div class="bg-white rounded-4xl shadow-md mx-auto p-6">
+        <div class="bg-gray-100 rounded-4xl shadow-md mx-auto p-6">
             <form class="space-y-4">
                 <div>
                     <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
@@ -447,7 +447,7 @@
                         type="text" 
                         id="fullName" 
                         name="fullName" 
-                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                        class="w-full px-3 py-2 border border-gray-300 rounded-4xl focus:outline-none focus:ring-2 focus:ring-red-700 focus:border-red-700" 
                         required
                     >
                 </div>
@@ -458,7 +458,7 @@
                         type="email" 
                         id="email" 
                         name="email" 
-                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                        class="w-full px-3 py-2 border border-gray-300 rounded-4xl focus:outline-none focus:ring-2 focus:ring-red-700 focus:border-red-700" 
                         required
                     >
                 </div>
@@ -469,7 +469,7 @@
                         type="tel" 
                         id="phoneNumber" 
                         name="phoneNumber" 
-                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                        class="w-full px-3 py-2 border border-gray-300 rounded-4xl focus:outline-none focus:ring-2 focus:ring-red-700 focus:border-red-700" 
                         required
                     >
                 </div>
@@ -480,13 +480,13 @@
                         id="message" 
                         name="message" 
                         rows="4" 
-                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-3xl focus:outline-none focus:ring-2 focus:ring-red-700 focus:border-red-700"
                     ></textarea>
                 </div>
                 
                 <button 
                     type="submit" 
-                    class="w-full px-4 py-2 bg-red-500 text-white font-medium rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    class="w-full px-4 py-2 bg-red-500 text-white font-medium rounded-3xl hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-700 focus:ring-offset-2"
                 >
                     Submit
                 </button>

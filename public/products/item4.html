@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/docs/output.css">
+    <link rel="stylesheet" href="../output.css">
     <title>Linen</title>
     <script>
     // Load navbar
-    fetch('/docs/components/navbar.html')
+    fetch('../assets/components/navbar.html')
         .then(res => res.text())
         .then(html => {
             document.getElementById('navbar').innerHTML = html;
@@ -40,7 +40,7 @@
         //     .then(html => document.getElementById('navbar').innerHTML = html);
 
     // Load footer
-    fetch('/docs/components/footer.html')
+    fetch('../assets/components/footer.html')
         .then(res => res.text())
         .then(html => document.getElementById('footer').innerHTML = html);
     </script>
