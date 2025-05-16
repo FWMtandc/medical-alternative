@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuous Cardiotocography</title>
+    <link rel="stylesheet" href="/output.css">
+    <style>
+        body {
+            /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; */
+            /* background-color: #f1f5f9; */
+        }
+        .tab-active {
+            /* background-color: #c4b5db; */
+            color: #4a5568;
+        }
+        .tab {
+            transition: background-color 0.3s ease;
+        }
+        .content-panel {
+            display: none;
+        }
+        .content-panel.active {
+            display: flex;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <script>
+        // Load navbar
+        fetch('../assets/components/navbar.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+
+                // Navbar is loaded and rendered:
+                const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
+                const mobileMenu = document.getElementById('mobile-menu');
+
+                if (mobileMenuButton && mobileMenu) {
+                    mobileMenuButton.addEventListener('click', function () {
+                        const expanded = this.getAttribute('aria-expanded') === 'true';
+                        this.setAttribute('aria-expanded', !expanded);
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                } else {
+                    console.warn('Mobile menu elements not found');
+                }
+            });
+        // Load Footer
+        fetch('../assets/components/footer.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('footer').innerHTML = html);
+            
+        // Video Playback
+        // const playButton = document.getElementById('play-button');
+        // const videoContainer = document.getElementById('video-container');
+        // const overviewVideo = document.getElementById('overview-video');
+
+        // playButton.addEventListener('click', () => {
+        //     //show the video container
+        //     videoContainer.classList.remove('hidden');
+            
+        //     //show the video container
+        //     videoContainer.classList.remove('hidden');
+
+        //     //play the video
+        //     overviewVideo.play();
+        // });
+
+    </script>
+</head>
+
+<body class="font-ubuntu tailwind-scrollbar no-scrollbar"> <nav id="navbar"></nav>
+    <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+        <div class="relative bg-white rounded-lg overflow-hidden max-w-3xl w-full ">
+            <button id="close-video" class="absolute top-2 right-2 z-20 bg-opacity-80 text-red-500 hover:text-white hover:bg-red-500 rounded-full w-10 h-10 flex items-center justify-center transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <video id="overview-video" class="w-full" controls style="z-index: 10;">
+                <source src="/assets/vid/ctgvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <!-- hero page -->
+    <div class="mt-16 font-ubuntu bg-[#E3FCFD] max-w-full">
+        <div class="py-12 px-4 sm:px-6 lg:py-16 lg:flex justify-center items-center">
+            <div class="lg:pl-36 mr-4">
+                <h3 class="font-bold text text-red-400">
+                    Advanced Labor Room Information System
+                </h3>
+                <h1 class="text-5xl font-bold mt-4 mb-6">
+                    Ensuring Safety & Precision in Maternity Care<span class="text-red-500">.</span>
+                </h1>
+                <button id="play-video-btn" class="flex items-center rounded-full bg-red-400 text-white shadow-lg cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:translate-x-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 bg-red-500 rounded-full p-2 text-white cursor-pointer transition duration-300" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                    </svg>
+                    <p class="pl-4 pr-6 ">
+                        Play Overview Video
+                    </p>
+                </button>
+            </div>
+            <div class="relative min-w-[360px] max-w-[1000px] overflow-visible">
+                <img 
+                    src="/assets/img/item2/hero-featured-a.webp" 
+                    alt="" 
+                    class="w-full h-auto object-cover skip-lazy" 
+                    loading="lazy" 
+                    sizes="(max-width: 1950px) 100vw, 1950px" 
+                    class="absolute transform translate-x-18"
+                />
+            </div>
+        </div>
+    </div>  
+    <!-- ipad section -->
+    <div class="bg-gray-100">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 ">
+            <div class="lg:flex items-center justify-center">
+                <div class="min">
+                    <img src="/assets/img/item2/ipad-a.webp" alt="" class="max-w-[360px] lg:max-w-[600px]">
+                </div>
+                <div>
+                    <h3 class="text-red-500 font-bold text-md mb-4">
+                        Designed to Optimize Safety & Efficiency
+                    </h3>
+                    <h1 class="text-4xl font-bold mb-6">
+                        <span class="">
+                            The Future in Monitoring Tech
+                        </span>
+                        <span class="text-red-500">
+                            .
+                        </span>
+                    </h1>
+                    <p class="mb-6">
+                        In the fast-paced and critical environment of maternity care, the need for precise, reliable and continuous monitoring is paramount.
+                    </p>
+                    <p>
+                        Our Advanced Labor Room Information System is designed to meet these need by integrating state-of-the-art monitoring technologies with real-time data analytics and comprehensive surveillance capabilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="relative">
+            <!-- Background with 2/3 light gray on top and 1/3 dark blue at bottom -->
+            <div class="absolute inset-0 bg-[#E3FCFD]">
+                <div class="absolute bottom-0 w-full h-1/3 bg-gray-100">
+                </div>
+            </div>
+            
+            <div class="relative max-w-7xl mx-auto pt-16">
+                <div class=" px-4">
+                    <div class="text-center mb-4">
+                        <h1 class="text-3xl font-bold text-gray-800">nexoLink</h1>
+                    </div>
+                    <!-- Banner with purple background and rounded corners -->
+                    <div class="bg-red-800 rounded-3xl overflow-hidden ">
+                        <!-- Left side content -->
+                        <div class="p-8 md:p-12 md:w-1/2 text-white">
+                            <!-- Subtle circular graphic in background -->
+                            <div class="grid grid-cols-1 lg:grid-cols-2">
+                                <div class="relative">
+                                    <div class="absolute -top-24 -left-24 w-96 h-96 border-2 border-red-300 rounded-full opacity-70"></div>
+                                    <!-- Text content -->
+                                    <div class="relative z-10 ml-8">
+                                        <h2 class="text-3xl md:text-4xl font-bold mb-6">IoT Integration Device</h2>
+                                        <p class="text-lg mb-8">
+                                            Integration devices that connect over serial to medical devices for data capture, enabling efficient and accurate data transfer across different systems.
+                                        </p>
+                                        <button class="border-2 border-white text-white font-medium py-2 px-8 rounded-full hover:bg-white hover:text-red-500 transition duration-300">
+                                            Contact Us
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class=" md:w-1/2 flex justify-end items-center">
+                                        <img src="/assets/img/item2/iot.webp" alt="Gambar" class="w-full min-w-[250px] max-w-[450px] object-cover md:absolute right-32 top-90 lg:top-50 mt-12 mr-10" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right side image -->
+  
+                    </div>
+                    <div class="w-2/5 mt-16 pl-8">
+                        <img src="/assets/img/item2/iot-2.webp" alt="">
+                    </div>
+                    <!-- <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Seamless Device Integration</h2>
+                        <p class="text-lg mb-8">
+                            By automating the data capture process and ensuring interoperability among various medical devices and healthcare information systems.
+
+                            NexoLink is a custom IoT device, by NexoPrima. It have 3 x RS232 interface over RJ45 and 2 x USB 2.0. It can connect up-to 5 medical devices simultaneously, such as CTG, patient monitor, ventilator and Infusion pump.
+                        </p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- graph page -->
+        <div class="mt-12">
+            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 ">
+                <div class="mb-7 text-center">
+                    <h2 class="text-red-400 font-medium ">
+                        Seamless System Integration
+                    </h2>
+                    <h1 class="text-3xl font-medium">
+                        Streamlined Labor Operation<span class="text-red-500">.</span>
+                    </h1>
+                </div>
+                <div class="max-w-5xl mx-auto flex justify-center items-center">
+                    <img src="/assets/img/item2/iot-3.webp" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- point-point section-->
+        <div class="bg-[#E3FCFD]">
+            <!-- point-point -->
+            <div class="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:pb-16 flex py-12">
+                <div class="lg:flex items-center justify-center">
+                    <div class="flex flex-col items-center justify-center text-center px-12">
+                        <div class="bg-red-400 rounded-full p-4 w-16 h-16 flex items-center justify-center shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold my-5">
+                            Streamline Workflow Efficiency
+                        </h3>
+                        <p class="text-gray-900">
+                            Allowing healthcare providers to focus more on patient care rather than manual documentation task.
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center text-center px-12">
+                    <div class="bg-red-400 rounded-full p-4 w-16 h-16 flex items-center justify-center shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                    </div>  
+                        <h3 class="text-lg font-bold my-5">
+                            Enhance Operational Efficiency
+                        </h3>
+                        <p class="text-gray-900">
+                            Empowering clinicians with data-driven insights for informed decision-making and optimal resource allocation.
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center text-center px-12">
+                        <div class="bg-red-400 rounded-full p-4 w-16 h-16 flex items-center justify-center shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold my-5">
+                            Commitment to Excellence
+                        </h3>
+                        <p class="text-gray-900">
+                            Supporting healthcare facilities in delivering the safest and effective care for mothers and newborns.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- tab section -->
+        <div>
+            <!-- Heading -->
+            <div class="text-center py-10">
+                <h1 class="text-3xl font-bold text-gray-900">Addressing Challenges in Labor Room<span class="text-red-400">.</span></h1>
+            </div>
+            <!-- Tabs -->
+            <div class="max-w-xs lg:max-w-none mx-auto flex flex-col lg:flex-row justify-center space-y-4 lg:space-y-0 lg:space-x-6 text-gray-500 text-base font-medium border-b border-gray-200">
+                <button
+                    class="tab-btn  bg-red-400 text-white  px-4 py-4 rounded-xl active" 
+                    data-tab="decision">
+                        Decision Making
+                </button>
+                <button class="tab-btn " data-tab="safety">Patient Safety</button>
+                <button class="tab-btn " data-tab="communication">Communication</button>
+                <button class="tab-btn " data-tab="documentation">Documentation</button>
+                <button class="tab-btn " data-tab="archiving">Archiving</button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="p-10 max-w-7xl mx-auto">
+                <!-- Decision Making -->
+                <div class="tab-content" id="decision">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                        <!-- Image -->
+                        <div class="flex justify-center">
+                            <div class=" ">
+                                <img src="/assets/img/item2/decisionmaking.webp" alt="Archive Data" class="rounded-md max-w-full">
+                            </div>
+                        </div>
+                        <!-- Text -->
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Improve Decision-Making During Emergencies</h2>
+                            <p class="text-gray-600 text-base">
+                                In emergency situations (e.g., fetal distress, maternal complications), rapid access to accurate and up-to-date patient information is critical. mCare provides quick access to all relevant data, improving response times and reducing adverse outcomes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patient Safety -->
+                <div class="tab-content hidden"" id="safety">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                        <!-- Image -->
+                        <div class="flex justify-center">
+                            <div class="">
+                                <img src="/assets/img/item2/patientsafety.webp" alt="Archive Data" class="rounded-md max-w-full">
+                            </div>
+                        </div>
+                        <!-- Text -->
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Ensure Patient safety</h2>
+                            <p class="text-gray-600 text-base">
+                                By providing a comprehensive view of the patient’s condition and history, mCare can help in identifying high-risk situations early and facilitating prompt interventions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Communication -->
+                <div class="tab-content hidden"" id="communication">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                        <!-- Image -->
+                        <div class="flex justify-center">
+                            <div class="">
+                                <img src="/assets/img/item2/communication.webp" alt="communication" class="rounded-md max-w-full">
+                            </div>
+                        </div>
+                        <!-- Text -->
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Promotes Efficient Communication</h2>
+                            <p class="text-gray-600 text-base">
+                                mCare facilitates better communication among different healthcare team members involved in the labour and delivery process, ensuring everyone has access to the same up-to-date information.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documentation -->
+                <div class="tab-content hidden"" id="documentation">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                        <!-- Image -->
+                        <div class="flex justify-center">
+                            <div class="">
+                                <img src="/assets/img/item2/documentation.webp" alt="documentation" class="rounded-md max-w-full">
+                            </div>
+                        </div>
+                        <!-- Text -->
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Solving Fragmented Documentation and Manual Record-Keeping</h2>
+                            <p class="text-gray-600 text-base">
+                                Traditional paper-based systems or isolated digital records can be prone to errors, delays, and loss of critical data. mCare provides centralized and real-time digital records for each patient, ensuring that essential information is accessible when needed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Archiving -->
+                <div class="tab-content hidden" id="archiving">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                        <!-- Image -->
+                        <div class="flex justify-center">
+                            <div class="">
+                                <img src="/assets/img/item2/archiving.webp" alt="archiving" class="rounded-md max-w-full">
+                            </div>
+                        </div>
+                        <!-- Text -->
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Unlimited Access to Historical Data</h2>
+                            <p class="text-gray-600 text-base">
+                                Historical data can be retrieved and analyzed at any time,
+                                making it easier to identify trends, abnormalities and other
+                                critical information for further analysis and improve patient care.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="relative">
+            <!-- Background with 2/3 light gray on top and 1/3 dark blue at bottom -->
+            <div class="absolute inset-0 bg-gray-100">
+                <div class="absolute bottom-0 w-full h-1/3 bg-gray-300">
+                </div>
+            </div>
+            <div class="relative max-w-7xl mx-auto pt-16">
+                <div class=" px-4">
+                    <!-- Banner with purple background and rounded corners -->
+                    <div class="bg-red-800 rounded-3xl overflow-hidden flex flex-col md:flex-row items-center">
+                        <!-- Left side content -->
+                        <div class="p-8 md:p-12 md:w-1/2 text-white">
+                            <!-- Subtle circular graphic in background -->
+                            <div class="relative">
+                                <div class="absolute -top-24 -left-24 w-96 h-96 border-2 border-red-300 rounded-full opacity-70"></div>
+                                
+                                <!-- Text content -->
+                                <div class="relative z-10">
+                                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Innovating for better care.</h2>
+                                    
+                                    <p class="text-lg mb-8">
+                                        An advances healthcare technology by empowering providers with innovative tools to improve outcomes for mothers and babies.
+                                    </p>
+                                    
+                                    <button class="border-2 border-white text-white font-medium py-2 px-8 rounded-full hover:bg-white hover:text-red-500 transition duration-300">
+                                        Contact Us
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right side image -->
+                        <div class="md:w-1/2">
+                            <img src="/assets/img/item2/mother-newborn-1024x789.webp" alt="Gambar" class="w-full h-auto object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="relative "> -->
+            <!-- Background with 2/3 light gray on top and 1/3 dark blue at bottom -->
+            <!-- <div class="absolute inset-0 bg-gray-100">
+                <div class="absolute bottom-0 w-full h-1/3 bg-gray-800">
+                </div>
+            </div>
+            <div class="relative max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 bg-red-800">
+                <div>
+                    
+                </div>
+            </div>
+        </div> -->
+    </div>
+<footer id="footer"></footer>
+</body>
+<script>        
+    // Video Playback
+    document.getElementById('play-video-btn').addEventListener('click', function() {
+        document.getElementById('video-modal').classList.remove('hidden');
+        document.getElementById('overview-video').play();
+    });
+    document.getElementById('close-video').addEventListener('click', function() {
+        document.getElementById('video-modal').classList.add('hidden');
+        document.getElementById('overview-video').pause();
+        document.getElementById('overview-video').currentTime = 0;
+    });
+
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        // Remove active styles
+        tabButtons.forEach(b => b.classList.remove("bg-red-400", "text-white", "px-4", "py-4", "rounded-xl", "active"));
+        tabContents.forEach(content => content.classList.add("hidden"));
+
+        // Add active style to clicked tab
+        btn.classList.add("bg-red-400", "text-white", "px-4", "py-4", "rounded-xl", "active");
+
+        // Show the corresponding tab content
+        const tabId = btn.getAttribute("data-tab");
+        document.getElementById(tabId).classList.remove("hidden");
+      });
+    });
+</script>
+</html>
