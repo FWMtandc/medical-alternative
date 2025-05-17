@@ -5,6 +5,43 @@
     --font-ubuntu: "Ubuntu", "sans-serif";
 
 }
+
+@layer {
+  .product-card {
+  @apply bg-white p-4 rounded-3xl border-3 border-gray-300;
+}
+.product-card-inner {
+  @apply lg:flex;
+}
+.product-card-img-wrap {
+  @apply flex justify-center items-center;
+}
+.product-card-img {
+  @apply w-[110px];
+}
+.product-card-grid {
+  @apply grid grid-cols-16;
+}
+.product-card-title {
+  @apply col-span-16 font-bold text-center md:text-left text-purple-800;
+}
+.product-card-label {
+  @apply col-span-5 font-bold flex;
+}
+.product-card-colon {
+  @apply col-span-1 ml-2;
+}
+.product-card-value {
+  @apply col-span-10 flex items-start;
+}
+.product-card-footer {
+  @apply flex lg:justify-end mt-4;
+}
+.product-card-btn {
+  @apply bg-black text-white rounded-3xl px-4 py-2 text-center w-full lg:w-auto;
+}
+}
+
 /* 
 @utility scrollbar-hidden {
   &::-webkit-scrollbar {
