@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/output.css">
-    <title>Medical Linen</title>
+    <title>Emollients and Skin Protection</title>
     <script>
     // Load navbar
     fetch('../assets/components/navbar.html')
@@ -44,63 +44,72 @@
         .then(res => res.text())
         .then(html => document.getElementById('footer').innerHTML = html);
     </script>
+    <style>
+/* .bg-custom {
+    background: linear-gradient(
+        to right, 
+        #c084fc 0%,
+        #6b21a8 100%  
+    );
+} */
+    </style>
 </head>
-<body class="bg-gray-00">
-    <nav id="navbar"></nav>
+<body class="bg-gray-200">
+<nav id="navbar"></nav>
 <!-- SECTION: HERO SECTION -->
-    <div class="bg-gradient-to-r from-purple-400 to-purple-800 py-16 text-white"> <!-- from-[#02FBFD] to-[#04B7B1] -->
+    <div class="bg-gradient-to-r from-[#c084fc] to-purple-800 py-32 text-white"> <!-- from-[#02FBFD] to-[#04B7B1] -->
         <div class="max-w-7xl mx-auto px-4 text-center mt-16">
             <h1 class="text-4xl font-bold mb-4">Emollients and Skin Protection</h1>
         </div>
     </div>
 <!-- SECTION: BUTTON LINK -->
-    <div>
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16">
-            <h1 class="text-3xl font-bold text-center mt-8 mb-4">
+    <div class="">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 -mt-16">
+            <!-- <h1 class="text-3xl font-bold text-center mt-8 mb-4">
                 Emollients and Skin Protection
             </h1>
-            <div class="w-56 h-1 bg-purple-800 mx-auto mt-4 mb-6 rounded-full"></div>
+            <div class="w-56 h-1 bg-purple-800 mx-auto mt-4 mb-6 rounded-full"></div> -->
             <div>
-                <div class="bg-gray-300 grid grid-cols-2 lg:flex items-center justify-center gap-2 p-2 rounded-3xl">
-                    <a href="#skin-dryness" class="bg-purple-800 text-white font-semibold w-full h-20 flex items-center justify-center text-center rounded-2xl px-1 py-4 transition transform hover:-translate-y-1 hover:-translate-x-1                 lg:hover:-translate-y-1 lg:hover:-translate-x-1">Skin Dryness</a>
-                    <a href="#skin-dryness-itchiness" class="bg-purple-800 text-white font-semibold w-full h-20 flex items-center justify-center text-center rounded-2xl px-1 py-4 transition transform hover:-translate-y-1 hover:translate-x-1               lg:hover:-translate-y-1 lg:hover:-translate-x-1">Skin Dryness Itchiness</a>
-                    <a href="#skin-inflamattion" class="bg-purple-800 text-white font-semibold w-full h-20 flex items-center justify-center text-center rounded-2xl px-1 py-4 transition transform hover:translate-y-1 hover:-translate-x-1                     lg:hover:-translate-y-1 lg:hover:translate-x-1">Skin Inflamattion</a>
-                    <a href="#topical-calcineurin-inhibitors" class="bg-purple-800 text-white font-semibold w-full h-20 flex items-center justify-center text-center rounded-2xl px-1 py-4 transition transform hover:translate-y-1 hover:translate-x-1                            lg:hover:-translate-y-1 lg:hover:translate-x-1">Topical Calcineurin Inhibitors (TCIS)</a>
+                <div class="bg-gray-300 grid grid-cols-2 lg:flex items-center justify-center gap-2 p-2 rounded-3xl shadow-purple-500">
+                    <a href="#skin-dryness" class="bg-purple-800 text-white font-semibold w-full h-20 flex items-center justify-center text-center rounded-2xl px-1 py-4 transition transform hover:-translate-y-1 hover:-translate-x-1 lg:hover:-translate-y-1 lg:hover:-translate-x-1                    hover:shadow-2xl">Skin Dryness</a>
+                    <a href="#skin-dryness-itchiness" class="bg-purple-800 text-white font-semibold w-full h-20 flex items-center justify-center text-center rounded-2xl px-1 py-4 transition transform hover:-translate-y-1 hover:translate-x-1 lg:hover:-translate-y-1 lg:hover:-translate-x-1                  hover:shadow-2xl">Skin Dryness Itchiness</a>
+                    <a href="#skin-inflammation" class="bg-purple-800 text-white font-semibold w-full h-20 flex items-center justify-center text-center rounded-2xl px-1 py-4 transition transform hover:translate-y-1 hover:-translate-x-1 lg:hover:-translate-y-1 lg:hover:translate-x-1               hover:shadow-2xl">Skin Inflamattion</a>
+                    <a href="#topical-calcineurin-inhibitors" class="bg-purple-800 text-white font-semibold w-full h-20 flex items-center justify-center text-center rounded-2xl px-1 py-4 transition transform hover:translate-y-1 hover:translate-x-1 lg:hover:-translate-y-1 lg:hover:translate-x-1           hover:shadow-2xl">Topical Calcineurin Inhibitors (TCIS)</a>
                 </div>
             </div>
         </div>
     </div>
 <!-- SECTION: Skin Dryness -->
-    <div id="#skin-dryness" class="bg-gray-300">
+    <div id="skin-dryness" class="bg-gray-200 scroll-mt-24">
         <h1 class="text-3xl font-bold text-center mt-8 mb-4">
             Skin Dryness
         </h1>
         <div class="w-22 h-1 bg-purple-800 mx-auto mt-4 mb-6 rounded-full"></div>
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16">
+        <div class="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:pb-16">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- products card -->
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img" src="/assets/img/emollients-skin-protection/skin-dryness/aquadin.jpg" alt="">
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img" src="/assets/img/emollients-skin-protection/skin-dryness/aquadin.jpg" alt="">
                         </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
                                 Aquadin
                             </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 This product discription
                             </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product registration number
                             </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product packing size
                             </div>
                         </div>
@@ -111,28 +120,28 @@
                         </a>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img" src="/assets/img/emollients-skin-protection/skin-dryness/aquadin-g25.jpg" alt="">
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img" src="/assets/img/emollients-skin-protection/skin-dryness/aquadin-g25.jpg" alt="">
                         </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
                                 Aquadin G25
                             </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 This product discription
                             </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product registration number
                             </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product packing size
                             </div>
                         </div>
@@ -143,28 +152,28 @@
                         </a>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img"src="/assets/img/emollients-skin-protection/skin-dryness/aquadin-g50.jpg" alt="">
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/assets/img/emollients-skin-protection/skin-dryness/aquadin-g50.jpg" alt="">
                         </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
                                 Aquadin G50
                             </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 This product discription
                             </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product registration number
                             </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product packing size
                             </div>
                         </div>
@@ -175,28 +184,28 @@
                         </a>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
                         </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
                                 Product
                             </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 This product discription
                             </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product registration number
                             </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product packing size
                             </div>
                         </div>
@@ -207,28 +216,28 @@
                         </a>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
                         </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
                                 Product
                             </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 This product discription
                             </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product registration number
                             </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product packing size
                             </div>
                         </div>
@@ -239,61 +248,28 @@
                         </a>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
                         </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
                                 Product
                             </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 This product discription
                             </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product registration number
                             </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
-                                this is product packing size
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card-footer">
-                        <a href="" class="product-card-btn">
-                        button with long text
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
-                        </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
-                                Product
-                            </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
-                                This product discription
-                            </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
-                                this is product registration number
-                            </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product packing size
                             </div>
                         </div>
@@ -305,28 +281,28 @@
                     </div>
                 </div>
                 
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
                         </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
                                 Product
                             </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 This product discription
                             </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product registration number
                             </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product packing size
                             </div>
                         </div>
@@ -338,61 +314,28 @@
                     </div>
                 </div>
                 
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
                         </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
                                 Product
                             </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 This product discription
                             </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product registration number
                             </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
-                                this is product packing size
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card-footer">
-                        <a href="" class="product-card-btn">
-                        button with long text
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
-                        </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
-                                Product
-                            </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
-                                This product discription
-                            </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
-                                this is product registration number
-                            </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product packing size
                             </div>
                         </div>
@@ -407,36 +350,36 @@
         </div>
     </div>
 <!-- SECTION: Skin Dryness Itchiness -->
-    <div id="#skin-dryness" class="bg-gray-300">
+    <div id="skin-dryness-itchiness" class="bg-gray-200 scroll-mt-24">
         <h1 class="text-3xl font-bold text-center mt-8 mb-4">
-            Skin Dryness
+            Skin Dryness Itchiness
         </h1>
-        <div class="w-22 h-1 bg-purple-800 mx-auto mt-4 mb-6 rounded-full"></div>
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16">
+        <div class="w-38 h-1 bg-purple-800 mx-auto mt-4 mb-6 rounded-full"></div>
+        <div class="spacer">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- products card -->
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
                         </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
                                 Product
                             </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 This product discription
                             </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product registration number
                             </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product packing size
                             </div>
                         </div>
@@ -447,61 +390,28 @@
                         </a>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
                         </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
                                 Product
                             </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 This product discription
                             </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product registration number
                             </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
-                                this is product packing size
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card-footer">
-                        <a href="" class="product-card-btn">
-                        button with long text
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
-                        </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
-                                Product
-                            </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
-                                This product discription
-                            </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
-                                this is product registration number
-                            </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product packing size
                             </div>
                         </div>
@@ -513,28 +423,28 @@
                     </div>
                 </div>
                 
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
                         </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
                                 Product
                             </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 This product discription
                             </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product registration number
                             </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product packing size
                             </div>
                         </div>
@@ -546,61 +456,28 @@
                     </div>
                 </div>
                 
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
                         </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
                                 Product
                             </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 This product discription
                             </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product registration number
                             </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
-                                this is product packing size
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card-footer">
-                        <a href="" class="product-card-btn">
-                        button with long text
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-card-inner">
-                        <div class="product-card-img-wrap">
-                            <img class="product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
-                        </div>
-                        <div class="product-card-grid">
-                            <h1 class="product-card-title">
-                                Product
-                            </h1>
-                            <div class="product-card-label">Description</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
-                                This product discription
-                            </div>
-                            <div class="product-card-label">Reg. No.</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
-                                this is product registration number
-                            </div>
-                            <div class="product-card-label">Packing Size</div>
-                            <div class="product-card-colon">:</div>
-                            <div class="product-card-value">
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
                                 this is product packing size
                             </div>
                         </div>
@@ -615,8 +492,290 @@
         </div>
         
     </div>
-
-
+<!-- SECTION: Skin Inflamation -->
+    <div id="skin-inflammation" class="bg-gray-200 scroll-mt-24">
+        <h1 class="text-3xl font-bold text-center mt-8 mb-4">
+            Skin Dryness Itchiness
+        </h1>
+        <div class="w-38 h-1 bg-purple-800 mx-auto mt-4 mb-6 rounded-full"></div>
+        <div class="spacer">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- products card -->
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                        </div>
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
+                                Product
+                            </h1>
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                This product discription
+                            </div>
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product registration number
+                            </div>
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product packing size
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card-footer">
+                        <a href="" class="product-card-btn">
+                        button with long text
+                        </a>
+                    </div>
+                </div>
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                        </div>
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
+                                Product
+                            </h1>
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                This product discription
+                            </div>
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product registration number
+                            </div>
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product packing size
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card-footer">
+                        <a href="" class="product-card-btn">
+                        button with long text
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                        </div>
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
+                                Product
+                            </h1>
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                This product discription
+                            </div>
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product registration number
+                            </div>
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product packing size
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card-footer">
+                        <a href="" class="product-card-btn">
+                        button with long text
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                        </div>
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
+                                Product
+                            </h1>
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                This product discription
+                            </div>
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product registration number
+                            </div>
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product packing size
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card-footer">
+                        <a href="" class="product-card-btn">
+                        button with long text
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                        </div>
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
+                                Product
+                            </h1>
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                This product discription
+                            </div>
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product registration number
+                            </div>
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product packing size
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card-footer">
+                        <a href="" class="product-card-btn">
+                        button with long text
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                        </div>
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
+                                Product
+                            </h1>
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                This product discription
+                            </div>
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product registration number
+                            </div>
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product packing size
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card-footer">
+                        <a href="" class="product-card-btn">
+                        button with long text
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- SECTION: Topical Calcineurin Inhibitors -->
+    <div id="topical-calcineurin-inhibitors" class="bg-gray-200 scroll-mt-24">
+        <h1 class="text-3xl font-bold text-center mt-8 mb-4">
+            Topical Calcineurin Inhibitors (TCIS)
+        </h1>
+        <div class="w-38 h-1 bg-purple-800 mx-auto mt-4 mb-6 rounded-full"></div>
+        <div class="spacer">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- products card -->
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                        </div>
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
+                                Product
+                            </h1>
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                This product discription
+                            </div>
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product registration number
+                            </div>
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product packing size
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card-footer">
+                        <a href="" class="product-card-btn">
+                        button with long text
+                        </a>
+                    </div>
+                </div>
+                <div class="skin-protection-product-card">
+                    <div class="skin-protection-product-card-inner">
+                        <div class="skin-protection-product-card-img-wrap">
+                            <img class="skin-protection-product-card-img"src="/public/assets/img/emollients-skin-protection/skin-dryness/" alt="">
+                        </div>
+                        <div class="skin-protection-product-card-grid">
+                            <h1 class="skin-protection-product-card-title">
+                                Product
+                            </h1>
+                            <div class="skin-protection-product-card-label">Description</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                This product discription
+                            </div>
+                            <div class="skin-protection-product-card-label">Reg. No.</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product registration number
+                            </div>
+                            <div class="skin-protection-product-card-label">Packing Size</div>
+                            <div class="skin-protection-product-card-colon">:</div>
+                            <div class="skin-protection-product-card-value">
+                                this is product packing size
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card-footer">
+                        <a href="" class="product-card-btn">
+                        button with long text
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- natural skin page link -->

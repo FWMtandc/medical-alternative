@@ -3,43 +3,90 @@
 
 @theme {
     --font-ubuntu: "Ubuntu", "sans-serif";
+}
 
+@utility flex-center{
+    @apply flex justify-center items-center;
+}
+
+@utility spacer{
+    @apply max-w-7xl mx-auto px-4 sm:px-6 pb-12 lg:pb-16;
+}
+
+/* @layer utilities{
+    .the-spacer {
+        @apply 
+    }
+} */
+
+html {
+    scroll-behavior: smooth;
+}
+
+@layer base {
+    ul {
+        @apply list-disc
+    }
 }
 
 @layer {
-  .product-card {
-  @apply bg-white p-4 rounded-3xl border-3 border-gray-300;
-}
-.product-card-inner {
-  @apply lg:flex;
-}
-.product-card-img-wrap {
-  @apply flex justify-center items-center;
-}
-.product-card-img {
-  @apply w-[110px];
-}
-.product-card-grid {
-  @apply grid grid-cols-16;
-}
-.product-card-title {
-  @apply col-span-16 font-bold text-center md:text-left text-purple-800;
-}
-.product-card-label {
-  @apply col-span-5 font-bold flex;
-}
-.product-card-colon {
-  @apply col-span-1 ml-2;
-}
-.product-card-value {
-  @apply col-span-10 flex items-start;
-}
-.product-card-footer {
-  @apply flex lg:justify-end mt-4;
-}
-.product-card-btn {
-  @apply bg-black text-white rounded-3xl px-4 py-2 text-center w-full lg:w-auto;
-}
+    /* .uni-btn {
+        @apply    ;
+    } */
+    .skin-protection-product-card {
+        @apply bg-white p-4 rounded-4xl border-3 border-gray-300 mx-auto w-fit lg:w-full;
+    }
+    .skin-protection-product-card-inner {
+        @apply lg:flex;
+    }
+    .skin-protection-product-card-img-wrap {
+        @apply flex justify-center items-center;
+    }
+    .skin-protection-product-card-img {
+        @apply w-[110px];
+    }
+    .skin-protection-product-card-grid {
+        @apply grid grid-cols-16;
+    }
+    .skin-protection-product-card-title {
+        @apply col-span-16 font-bold text-xl text-center md:text-left text-purple-800 underline decoration-purple-300;
+        }
+    .skin-protection-product-card-label {
+        @apply col-span-5 font-bold flex;
+    }
+    .skin-protection-product-card-colon {
+        @apply col-span-1 ml-2;
+    }
+    .skin-protection-product-card-value {
+        @apply col-span-10 flex items-start;
+    }
+    .product-card-footer {
+        @apply flex lg:justify-end mt-4;
+    }
+    .product-card-btn {
+        @apply bg-black text-white rounded-3xl px-4 py-2 text-center w-full lg:w-auto;
+    }
+    .skincare-product-card {
+        @apply flex space-x-8 bg-white rounded-4xl p-4;
+    }
+    .skincare-product-card-img-wrap {
+        @apply flex justify-center items-center;
+    }
+    .skincare-product-card-img {
+        @apply min-w-60;
+    }
+    .skincare-product-card-title {
+        @apply mb-2 font-bold text-2xl text-center md:text-left text-purple-800 underline decoration-purple-300;
+    }
+    .skincare-product-card-desc {
+        @apply text-justify pr-6;
+    }
+    .skincare-product-card-list-wrap {
+        @apply flex space-x-4 mt-2;
+    }
+    .skincare-product-card-list {
+        @apply pl-6;
+    }
 }
 
 /* 

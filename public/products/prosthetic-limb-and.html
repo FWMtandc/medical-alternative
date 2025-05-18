@@ -6,9 +6,9 @@
     <title>Advanced Prosthetic Solutions</title>
     <link rel="stylesheet" href="/output.css">
     <style>
-            .bg-custom {
-        background: linear-gradient(to bottom, white 90%, #2563eb 10%);
-    }
+        .bg-custom {
+            background: linear-gradient(to bottom, white 85%, #155DFC 15%);
+        }
         html {
             scroll-behavior: smooth;
         }
@@ -44,8 +44,8 @@
 <body class="bg-gray-100"><nav id="navbar"></nav>
     
 
-    <!-- Hero Section -->
-    <section class=" bg-custom pt-12 px-4 bg-white mt-16">
+    <!-- Hero Section bg-gradient-to-b from-white via-white to-[#2563eb] -->
+    <section class="bg-custom pt-12 px-4 bg-white mt-16">
         <div class="container mx-auto text-center max-w-3xl">
             <h1 class="text-4xl font-bold mb-4">Advanced Prosthetic Solutions</h1>
             <p class="text-gray-600 mb-12">
@@ -54,13 +54,13 @@
             
             <!-- Category Buttons -->
             <div class="bg-gray-200 rounded-4xl p-4 max-w-7xl mx-auto flex justify-between">
-                <a href="#prosthetic-limbs" class="w-1/2 bg-gray-500 rounded-l-3xl mr-1 text-white flex items-center relative transition-transform hover:-translate-y-1 shadow-md">
+                <a href="#product" class="w-1/2 bg-gray-500 rounded-l-3xl mr-1 text-white flex items-center relative transition-transform hover:-translate-y-1 hover:-translate-x-1  shadow-md"> 
                     <img src="/assets/img/item1/Frame 92.png" alt="Prosthetic Limb" class="w-full h-auto object-cover rounded-l-3xl">
                     <span class="absolute inset-y-0 flex right-0 mr-4 items-center justify-center font-semibold z-10 text-xl">Prosthetic Limbs</span>
                 </a>
-                <a href="#shoes" class="w-1/2 bg-gray-500 rounded-r-3xl ml-1 text-white flex items-center relative transition-transform hover:-translate-y-1 shadow-md">
+                <a href="#shoes" class="w-1/2 bg-gray-500 rounded-r-3xl ml-1 text-white flex items-center relative transition-transform hover:-translate-y-1 hover:translate-x-1  shadow-md">
                     <img src="/assets/img/item1/Frame 91.png" alt="Shoes" class="w-full h-auto object-cover rounded-l-3xl">
-                    <span class="absolute inset-y-0 flex left-1 ml-4 items-center justify-center font-semibold z-10 text-3xl">Shoes</span>
+                    <span class="absolute inset-y-0 flex left-1 ml-4 items-center justify-center font-semibold z-10 text-xl">Medical Shoes</span>
                 </a>
             </div>
         </div>
@@ -135,7 +135,7 @@
                 <div class="bg-gray-100 rounded-4xl p-4 mb-6">
                     <h3 class="text-center text-gray-800 font-semibold">DX Series</h3>
                 </div>
-                
+                <!-- main card -->
                 <div class="flex flex-col md:flex-row">
                     <div class="md:w-2/3 bg-white rounded-4xl p-4 mb-4 md:mb-0 md:mr-4">
                         <img src="/assets/img/item1/Group 46.png" alt="Anatomic Insole" class="w-full h-64 object-contain">
@@ -160,134 +160,139 @@
                         
                     </div>
                 </div>
-                
-                <div class=" flex justify-around space-x-4">
-                    <div class="mt-8 bg-white rounded-4xl p-6 shadow-md">
-                        <!-- Title -->
-                        <h3 class="text-center text-2xl font-bold text-gray-800 mb-6">DX01</h3>
 
-                        <!-- Content -->
-                        <div class="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0">
-                            <!-- Left Section -->
-                            <div class="flex flex-col items-center space-y-4">
-                                <img src="/assets/img/item1/green.png" alt="Blue Sandal" class="w-40 h-auto object-contain">
-                                <!-- <h4 class="text-lg font-semibold text-gray-800">#Green</h4> -->
-                                <ul class="text-sm text-gray-600">
-                                    <li><strong>Style:</strong> Casual ladies sandal</li>
-                                    <li><strong>Upper:</strong> Microfiber</li>
-                                    <li><strong>Outsole:</strong> PU</li>
-                                    <li><strong>Closure:</strong> Velcro</li>
-                                    <li><strong>Size:</strong> W(3-11)</li>
-                                </ul>
-                            </div>
 
-                            <!-- Right Section -->
-                            <div class="flex flex-col items-center space-y-4">
-                                <img src="/assets/img/item1/grey.png" alt="Brown Sandal" class="w-32 h-auto object-contain">
-                                <!-- <h4 class="text-lg font-semibold text-gray-800">#Grey</h4> -->
-                                <ul class="text-sm text-gray-600">
-                                    <li>Removable insole</li>
-                                    <li>Soft comfort upper</li>
-                                    <li>Easy wear</li>
-                                    <li>Anti-slip outsole</li>
-                                </ul>
+
+                <div class="">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4">
+                        <div class="mt-8 bg-white rounded-4xl p-6 shadow-md">
+                            <!-- Title -->
+                            <h3 class="text-center text-2xl font-bold text-gray-800 mb-6">DX01</h3>
+
+                            <!-- Content -->
+                            <div class="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0">
+                                <!-- Left Section -->
+                                <div class="flex flex-col items-center space-y-4">
+                                    <img src="/assets/img/item1/green.png" alt="Blue Sandal" class="w-40 h-auto object-contain">
+                                    <!-- <h4 class="text-lg font-semibold text-gray-800">#Green</h4> -->
+                                    <ul class="text-sm text-gray-600">
+                                        <li><strong>Style:</strong> Casual ladies sandal</li>
+                                        <li><strong>Upper:</strong> Microfiber</li>
+                                        <li><strong>Outsole:</strong> PU</li>
+                                        <li><strong>Closure:</strong> Velcro</li>
+                                        <li><strong>Size:</strong> W(3-11)</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Right Section -->
+                                <div class="flex flex-col items-center space-y-4">
+                                    <img src="/assets/img/item1/grey.png" alt="Brown Sandal" class="w-32 h-auto object-contain">
+                                    <!-- <h4 class="text-lg font-semibold text-gray-800">#Grey</h4> -->
+                                    <ul class="text-sm text-gray-600">
+                                        <li>Removable insole</li>
+                                        <li>Soft comfort upper</li>
+                                        <li>Easy wear</li>
+                                        <li>Anti-slip outsole</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="mt-8 bg-white rounded-4xl p-6 shadow-md">
-                        <!-- Title -->
-                        <h3 class="text-center text-2xl font-bold text-gray-800 mb-6">DX02</h3>
+                        <div class="mt-8 bg-white rounded-4xl p-6 shadow-md">
+                            <!-- Title -->
+                            <h3 class="text-center text-2xl font-bold text-gray-800 mb-6">DX02</h3>
 
-                        <!-- Content -->
-                        <div class="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0">
-                            <!-- Left Section -->
-                            <div class="flex flex-col items-center space-y-4">
-                                <img src="/assets/img/item1/pearl.png" alt="Blue Sandal" class="w-40 h-auto object-contain">
-                                <h4 class="text-lg font-semibold text-gray-800">#Pearl</h4>
-                                <ul class="text-sm text-gray-600">
-                                    <li><strong>Style:</strong> Casual ladies sandal</li>
-                                    <li><strong>Upper:</strong> Microfiber</li>
-                                    <li><strong>Outsole:</strong> PU</li>
-                                    <li><strong>Closure:</strong> Velcro</li>
-                                    <li><strong>Size:</strong> W(3-11)</li>
-                                </ul>
-                            </div>
-                            <!-- Right Section -->
-                            <div class="flex flex-col items-center space-y-4">
-                                <img src="/assets/img/item1/khaki.png" alt="Brown Sandal" class="w-40 h-auto object-contain">
-                                <h4 class="text-lg font-semibold text-gray-800">#Khaki</h4>
-                                <ul class="text-sm text-gray-600">
-                                    <li>Removable insole</li>
-                                    <li>Soft comfort upper</li>
-                                    <li>Easy wear</li>
-                                    <li>Anti-slip outsole</li>
-                                </ul>
+                            <!-- Content -->
+                            <div class="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0">
+                                <!-- Left Section -->
+                                <div class="flex flex-col items-center space-y-4">
+                                    <img src="/assets/img/item1/pearl.png" alt="Blue Sandal" class="w-40 h-auto object-contain">
+                                    <h4 class="text-lg font-semibold text-gray-800">#Pearl</h4>
+                                    <ul class="text-sm text-gray-600">
+                                        <li><strong>Style:</strong> Casual ladies sandal</li>
+                                        <li><strong>Upper:</strong> Microfiber</li>
+                                        <li><strong>Outsole:</strong> PU</li>
+                                        <li><strong>Closure:</strong> Velcro</li>
+                                        <li><strong>Size:</strong> W(3-11)</li>
+                                    </ul>
+                                </div>
+                                <!-- Right Section -->
+                                <div class="flex flex-col items-center space-y-4">
+                                    <img src="/assets/img/item1/khaki.png" alt="Brown Sandal" class="w-40 h-auto object-contain">
+                                    <h4 class="text-lg font-semibold text-gray-800">#Khaki</h4>
+                                    <ul class="text-sm text-gray-600">
+                                        <li>Removable insole</li>
+                                        <li>Soft comfort upper</li>
+                                        <li>Easy wear</li>
+                                        <li>Anti-slip outsole</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="mt-8 bg-white rounded-4xl p-6 shadow-md">
-                        <!-- Title -->
-                        <h3 class="text-center text-2xl font-bold text-gray-800 mb-6">DX03</h3>
-                        <!-- Content -->
-                        <div class="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0">
-                            <!-- Left Section -->
-                            <div class="flex flex-col items-center space-y-4">
-                                <img src="/assets/img/item1/black.png" alt="Blue Sandal" class="w-40 h-auto object-contain">
-                                <h4 class="text-lg font-semibold text-gray-800">#Blue</h4>
-                                <ul class="text-sm text-gray-600">
-                                    <li><strong>Style:</strong> Casual ladies sandal</li>
-                                    <li><strong>Upper:</strong> Microfiber</li>
-                                    <li><strong>Outsole:</strong> PU</li>
-                                    <li><strong>Closure:</strong> Velcro</li>
-                                    <li><strong>Size:</strong> W(3-11)</li>
-                                </ul>
-                            </div>
+                        <div class="mt-8 bg-white rounded-4xl p-6 shadow-md">
+                            <!-- Title -->
+                            <h3 class="text-center text-2xl font-bold text-gray-800 mb-6">DX03</h3>
+                            <!-- Content -->
+                            <div class="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0">
+                                <!-- Left Section -->
+                                <div class="flex flex-col items-center space-y-4">
+                                    <img src="/assets/img/item1/black.png" alt="Blue Sandal" class="w-40 h-auto object-contain">
+                                    <h4 class="text-lg font-semibold text-gray-800">#Blue</h4>
+                                    <ul class="text-sm text-gray-600">
+                                        <li><strong>Style:</strong> Casual ladies sandal</li>
+                                        <li><strong>Upper:</strong> Microfiber</li>
+                                        <li><strong>Outsole:</strong> PU</li>
+                                        <li><strong>Closure:</strong> Velcro</li>
+                                        <li><strong>Size:</strong> W(3-11)</li>
+                                    </ul>
+                                </div>
 
-                            <!-- Right Section -->
-                            <div class="flex flex-col items-center space-y-4">
-                                <img src="/assets/img/item1/winered.png" alt="Brown Sandal" class="w-40 h-auto object-contain">
-                                <h4 class="text-lg font-semibold text-gray-800">#Brown</h4>
-                                <ul class="text-sm text-gray-600">
-                                    <li>Hallux valgus orthopedics</li>
-                                    <li>Easy wear design</li>
-                                    <li>Removable insole</li>
-                                    <li>Anti-slip outsole</li>
-                                </ul>
+                                <!-- Right Section -->
+                                <div class="flex flex-col items-center space-y-4">
+                                    <img src="/assets/img/item1/winered.png" alt="Brown Sandal" class="w-40 h-auto object-contain">
+                                    <h4 class="text-lg font-semibold text-gray-800">#Brown</h4>
+                                    <ul class="text-sm text-gray-600">
+                                        <li>Hallux valgus orthopedics</li>
+                                        <li>Easy wear design</li>
+                                        <li>Removable insole</li>
+                                        <li>Anti-slip outsole</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="mt-8 bg-white rounded-4xl p-6 shadow-md">
-                        <!-- Title -->
-                        <h3 class="text-center text-2xl font-bold text-gray-800 mb-6">DX04</h3>
-                        <!-- Content -->
-                        <div class="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0">
-                            <!-- Left Section -->
-                            <div class="flex flex-col items-center space-y-4">
-                                <img src="/assets/img/item1/blue.png" alt="Blue Sandal" class="w-40 h-auto object-contain">
-                                <h4 class="text-lg font-semibold text-gray-800">#Blue</h4>
-                                <ul class="text-sm text-gray-600">
-                                    <li><strong>Style:</strong> Casual ladies sandal</li>
-                                    <li><strong>Upper:</strong> Microfiber</li>
-                                    <li><strong>Outsole:</strong> PU</li>
-                                    <li><strong>Closure:</strong> Velcro</li>
-                                    <li><strong>Size:</strong> W(3-11)</li>
-                                </ul>
-                            </div>
+                        <div class="mt-8 bg-white rounded-4xl p-6 shadow-md">
+                            <!-- Title -->
+                            <h3 class="text-center text-2xl font-bold text-gray-800 mb-6">DX04</h3>
+                            <!-- Content -->
+                            <div class="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0">
+                                <!-- Left Section -->
+                                <div class="flex flex-col items-center space-y-4">
+                                    <img src="/assets/img/item1/blue.png" alt="Blue Sandal" class="w-40 h-auto object-contain">
+                                    <h4 class="text-lg font-semibold text-gray-800">#Blue</h4>
+                                    <ul class="text-sm text-gray-600">
+                                        <li><strong>Style:</strong> Casual ladies sandal</li>
+                                        <li><strong>Upper:</strong> Microfiber</li>
+                                        <li><strong>Outsole:</strong> PU</li>
+                                        <li><strong>Closure:</strong> Velcro</li>
+                                        <li><strong>Size:</strong> W(3-11)</li>
+                                    </ul>
+                                </div>
 
-                            <!-- Right Section -->
-                            <div class="flex flex-col items-center space-y-4">
-                                <img src="/assets/img/item1/brown.png" alt="Brown Sandal" class="w-40 h-auto object-contain">
-                                <h4 class="text-lg font-semibold text-gray-800">#Brown</h4>
-                                <ul class="text-sm text-gray-600">
-                                    <li>Hallux valgus orthopedics</li>
-                                    <li>Easy wear design</li>
-                                    <li>Removable insole</li>
-                                    <li>Anti-slip outsole</li>
-                                </ul>
+                                <!-- Right Section -->
+                                <div class="flex flex-col items-center space-y-4">
+                                    <img src="/assets/img/item1/brown.png" alt="Brown Sandal" class="w-40 h-auto object-contain">
+                                    <h4 class="text-lg font-semibold text-gray-800">#Brown</h4>
+                                    <ul class="text-sm text-gray-600">
+                                        <li>Hallux valgus orthopedics</li>
+                                        <li>Easy wear design</li>
+                                        <li>Removable insole</li>
+                                        <li>Anti-slip outsole</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
