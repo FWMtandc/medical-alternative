@@ -10,7 +10,7 @@
 }
 
 @utility spacer{
-    @apply max-w-7xl mx-auto px-4 sm:px-6 pb-12 lg:pb-16;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-16;
 }
 
 /* @layer utilities{
@@ -40,7 +40,7 @@ html {
         @apply lg:flex;
     }
     .skin-protection-product-card-img-wrap {
-        @apply flex justify-center items-center;
+        @apply flex justify-center items-center flex-shrink-0;
     }
     .skin-protection-product-card-img {
         @apply w-[110px];
@@ -58,13 +58,13 @@ html {
         @apply col-span-1 ml-2;
     }
     .skin-protection-product-card-value {
-        @apply col-span-10 flex items-start;
+        @apply col-span-10 flex items-start mr-4;
     }
     .product-card-footer {
-        @apply flex lg:justify-end mt-4;
+        @apply flex md:justify-end mt-4;
     }
     .product-card-btn {
-        @apply bg-black text-white rounded-3xl px-4 py-2 text-center w-full lg:w-auto;
+        @apply bg-black text-white rounded-3xl px-4 py-2 text-center w-full md:w-auto;
     }
     .skincare-product-card {
         @apply flex space-x-8 bg-white rounded-4xl p-4;
